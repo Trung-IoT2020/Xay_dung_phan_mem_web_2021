@@ -1,0 +1,4 @@
+Xây đựng chức năng danh mục hàng hóa (Category)
+- Thêm Xóa Sửa thông tin danh mục hàng hóa
+- hiển thị thông tin Danh mục hàng hóa 
+- (Nếu dc làm luôn API :)) )
