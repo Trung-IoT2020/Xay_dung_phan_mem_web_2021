@@ -13,7 +13,7 @@
 
 
  Route::get('/',['as'=>'index','uses'=>'PageController@getIndex']);
-Route::get('/trademarks/{id}',['as'=>'trademarks','uses'=>'PageController@getTrademark'])->where('id',"[0-9]+");
+//Route::get('/trademarks/{id}',['as'=>'trademarks','uses'=>'PageController@getTrademark'])->where('id',"[0-9]+");
 Route::get('/detail/{id}',['as'=>'detail','uses'=>'PageController@getDetail'])->where('id',"[0-9]+");
 Route::get('/register',['as'=>'register','uses'=>'PageController@getRegister']);
 Route::post('/register',['as'=>'postregister','uses'=>'PageController@postRegister']);
@@ -27,7 +27,7 @@ Route::post('/updatecart',['as'=>'postUpdateCart','uses'=>'CartController@Update
 Route::get('/order',['as'=>'getOrder','uses'=>'OrderController@getOrder']);
 Route::post('/order',['as'=>'postOrder','uses'=>'OrderController@postOrder']);
 Route::get('/order/success','OrderController@getSuccess');
-Route::post('search','PageController@Search');
+//Route::post('search','PageController@Search');
 
 
 
