@@ -1,0 +1,5 @@
+- Hiệu ứng zoom khi clear chuột vào hình ảnh tại trang chi tiết sản phẩm
+- Xây đựng chức năng Order(Backend + frontend) 
+- thanh toán
+- hiển thị khách hàng order trên backend(tên , địa chỉ số lượng,tổng tiền ,...)
+- Tính tiền cộng dồn cho tiền khi order và làm các 
