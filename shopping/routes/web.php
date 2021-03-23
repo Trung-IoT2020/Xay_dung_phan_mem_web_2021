@@ -49,18 +49,18 @@ Route::group(['middleware' => 'AdminAuth','namespace' => 'Admin','prefix' => 'ad
     });
     //--------------------------------------------------------------------------////category
      Route::get('/category/list',['as'=>'cate.getlist','uses'=>'CategoryController@getList']);
-    // Route::get('/category/add',['as'=>'cate.getadd','uses'=>'CategoryController@getAdd']);
-    // Route::post('/category/add',['as'=>'cate.postadd','uses'=>'CategoryController@postAdd']);
-    // Route::get('/category/{id}/edit',['as'=>'cate.getedit','uses'=>'CategoryController@getEdit']);
-    // Route::post('/category/{id}/edit',['as'=>'cate.postedit','uses'=>'CategoryController@postEdit']);
-    // Route::get('/category/{id}/delete',['as'=>'cate.getdelete','uses'=>'CategoryController@getDelete']);
+    Route::get('/category/add',['as'=>'cate.getadd','uses'=>'CategoryController@getAdd']);
+    Route::post('/category/add',['as'=>'cate.postadd','uses'=>'CategoryController@postAdd']);
+    Route::get('/category/{id}/edit',['as'=>'cate.getedit','uses'=>'CategoryController@getEdit']);
+    Route::post('/category/{id}/edit',['as'=>'cate.postedit','uses'=>'CategoryController@postEdit']);
+    Route::get('/category/{id}/delete',['as'=>'cate.getdelete','uses'=>'CategoryController@getDelete']);
     //--------------------------------------------------------------------------////trademark
      Route::get('/trademark/list',['as'=>'trademark.getlist','uses'=>'TrademarkController@getList']);
-    // Route::get('/trademark/add',['as'=>'trademark.getadd','uses'=>'TrademarkController@getAdd']);
-    // Route::post('/trademark/add',['as'=>'trademark.postadd','uses'=>'TrademarkController@postAdd']);
-    // Route::get('/trademark/{id}/edit',['as'=>'trademark.getedit','uses'=>'TrademarkController@getEdit']);
-    // Route::post('/trademark/{id}/edit',['as'=>'trademark.postedit','uses'=>'TrademarkController@postEdit']);
-    // Route::get('/trademark/{id}/delete',['as'=>'trademark.getdelete','uses'=>'TrademarkController@getDelete']);
+    Route::get('/trademark/add',['as'=>'trademark.getadd','uses'=>'TrademarkController@getAdd']);
+    Route::post('/trademark/add',['as'=>'trademark.postadd','uses'=>'TrademarkController@postAdd']);
+    Route::get('/trademark/{id}/edit',['as'=>'trademark.getedit','uses'=>'TrademarkController@getEdit']);
+    Route::post('/trademark/{id}/edit',['as'=>'trademark.postedit','uses'=>'TrademarkController@postEdit']);
+    Route::get('/trademark/{id}/delete',['as'=>'trademark.getdelete','uses'=>'TrademarkController@getDelete']);
 
     //--------------------------------------------------------------------------//product
     Route::get('/product/list',['as'=>'product.getlist','uses'=>'ProductController@getList']);
