@@ -2,7 +2,3 @@ Xây đựng chức năng hàng hóa(Product)
 - Thêm Xóa Sửa thông tin hàng hóa
 - Hiển thị thông tin hàng hóa 
 - (Nếu dc làm luôn API :)) )
-Xây đựng chức năng danh mục hàng hóa (Category)
-- Thêm Xóa Sửa thông tin danh mục hàng hóa
-- hiển thị thông tin Danh mục hàng hóa 
-- (Nếu dc làm luôn API :)) )
