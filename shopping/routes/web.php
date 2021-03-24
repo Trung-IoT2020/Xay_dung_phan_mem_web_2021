@@ -85,9 +85,9 @@ Route::group(['middleware' => 'AdminAuth','namespace' => 'Admin','prefix' => 'ad
 
     //--------------------------------------------------------------------------////user
     Route::get('/user/list',['as'=>'user.getlist','uses'=>'UserController@getList']);
-    // Route::get('/user/add',['as'=>'user.getadd','uses'=>'UserController@getAdd']);
-    // Route::post('/user/add',['as'=>'user.postadd','uses'=>'UserController@postAdd']);
-    // Route::get('/user/{id}/edit',['as'=>'user.getedit','uses'=>'UserController@getEdit']);
-    // Route::post('/user/{id}/edit',['as'=>'user.postedit','uses'=>'UserController@postEdit']);
-    // Route::get('/user/{id}/delete',['as'=>'user.getdelete','uses'=>'UserController@getDelete']);
+    Route::get('/user/add',['as'=>'user.getadd','uses'=>'UserController@getAdd']);
+    Route::post('/user/add',['as'=>'user.postadd','uses'=>'UserController@postAdd']);
+    Route::get('/user/{id}/edit',['as'=>'user.getedit','uses'=>'UserController@getEdit']);
+    Route::post('/user/{id}/edit',['as'=>'user.postedit','uses'=>'UserController@postEdit']);
+    Route::get('/user/{id}/delete',['as'=>'user.getdelete','uses'=>'UserController@getDelete']);
 });
