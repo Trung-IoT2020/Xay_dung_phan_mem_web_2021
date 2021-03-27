@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-<<<<<<< HEAD
+
    
-=======
+
     ///////////////////// PRODUCT //////////////////////////
     public function getAllProducts() 
     {
@@ -67,7 +67,7 @@ class ApiController extends Controller
         }
     }
     /////////////////////////////////////////////////////////////////////////////
->>>>>>> bao
+
 
     ////////////////////////////// CATEGORIES ///////////////////////////////////
     public function getAllCategories() 

@@ -1,0 +1,5 @@
+Xây dựng chức năng user trong backend
+hiển thị tất cả user có trong database
+xây đựng chức năng đăng nhập đăng ký từ frontend
+post get dữ liệu
+(nếu có thể thì xây dựng API :)) )

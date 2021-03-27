@@ -32,6 +32,13 @@
           <div class="pull-right auto-width-right">
             <ul class="top-details menu-beta l-inline">
 			<!--đăng nhập đăng ký-->
+			@if(Auth::check())
+              <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {!! Auth::user()->name !!}</a></li>
+              <li><a href="{{route('getlogout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+              @else
+                <li><a href="{{ url('/register') }}">Đăng kí</a></li>
+                <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
+              @endif
               
             </ul>
           </div>
