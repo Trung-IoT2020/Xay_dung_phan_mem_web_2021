@@ -83,11 +83,22 @@ Route::group(['middleware' => 'AdminAuth','namespace' => 'Admin','prefix' => 'ad
 
     
 
+
     //Order
     Route::get('/order/list',['as'=>'order.getlist','uses'=>'OrderController@getList']);
 
     //OrderDetails
     Route::get('/orderdetail/{order_id}/list',['as'=>'orderdetail.getlist','uses'=>'OrderDetailController@getList']);
+
+   //--------------------------------------------------------------------------// //Order
+      Route::get('/order/list',['as'=>'order.getlist','uses'=>'OrderController@getList']);
+    Route::post('/order/{id}/edit',['as'=>'order.postedit','uses'=>'OrderController@postEdit']);
+     Route::get('/order/{id}/delete',['as'=>'order.getdelete','uses'=>'OrderController@getDelete']);
+
+    ////--------------------------------------------------------------------------// //OrderDetails
+     Route::get('/orderdetail/{order_id}/list',['as'=>'orderdetail.getlist','uses'=>'OrderDetailController@getList']);
+    Route::post('/orderdetail/{id}/edit',['as'=>'orderdetail.postedit','uses'=>'OrderDetailController@postEdit']);
+   Route::get('/orderdetail/{id}/delete',['as'=>'orderdetail.getdelete','uses'=>'OrderDetailController@getDelete']);
 
     //user
     Route::get('/user/list',['as'=>'user.getlist','uses'=>'UserController@getList']);
