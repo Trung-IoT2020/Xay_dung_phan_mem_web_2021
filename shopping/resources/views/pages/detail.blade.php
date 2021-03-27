@@ -16,18 +16,25 @@
     <div class="row">
       <div class="col-md-9 col-lg-9">
         <div class="sanpham">
-          <img src="{{asset('Admin_style/images/'.$product->images)}}" alt="" class="img-thumbnail img-responsive anhlon">
+
+          <div class="xzoom-container">
+            <img class="xzoom3" src="{{asset('Admin_style/images/'.$product->images)}}" xoriginal="{{asset('Admin_style/images/zoom_images/'.$product->images)}}"
+            alt="" class="img-thumbnail img-responsive anhlon">
+          </div>
+         <!-- <img src="{{asset('Admin_style/images/'.$product->images)}}" alt="" class="img-thumbnail img-responsive anhlon"-->
+
+
           <div class="detailstyle">
             <h3>{!! $product->name !!}</h3>
             @if($product->price_sale != 0)
-              <div class="price_old">
-                <span style="color:black;font-weight:bold;font-size:17px;">Giá Cũ:</span>
-                <span class="price_sale">{!! number_format($product->price) !!} VNĐ</span>
-              </div>
-              <div class="price_new">
-                <span style="color:black;font-weight:bold;font-size:17px;">Giá Khuyến Mãi:</span>
-                <span class="price">{!! number_format($product->price_sale) !!} VNĐ</span>
-              </div>
+            <div class="price_old">
+              <span style="color:black;font-weight:bold;font-size:17px;">Giá Cũ:</span>
+              <span class="price_sale">{!! number_format($product->price) !!} VN</span>
+            </div>
+            <div class="price_new">
+              <span style="color:black;font-weight:bold;font-size:17px;">Giá Khuyến Mãi:</span>
+              <span class="price">{!! number_format($product->price_sale) !!} VN</span>
+            </div>
             @else
             <div class="price_old">
               <span style="color:black;font-weight:bold;font-size:17px;">Giá : </span><span class="price">{!! number_format($product->price) !!} VNĐ</span>
@@ -36,16 +43,16 @@
             @endif
             <h5>
               Color: @if($product->color == 'Red')
-                        <span style="color:red;font-weight:bold;">{{ $product->color }}</span>
-                      @elseif($product->color == 'Black')
-                        <span style="color:black;font-weight:bold;">{{ $product->color }}</span>
-                      @elseif($product->color == 'Pink')
-                        <span style="color:pink;font-weight:bold;">{{ $product->color }}</span>
-                      @elseif($product->color == 'Gold')
-                        <span style="color:yellow;font-weight:bold;">{{ $product->color }}</span>
-                      @elseif($product->color == 'White')
-                        <span style="color:white;background:#222222;font-weight:bold;">{{ $product->color }}</span>
-                      @endif
+              <span style="color:red;font-weight:bold;">{{ $product->color }}</span>
+              @elseif($product->color == 'Black')
+              <span style="color:black;font-weight:bold;">{{ $product->color }}</span>
+              @elseif($product->color == 'Pink')
+              <span style="color:pink;font-weight:bold;">{{ $product->color }}</span>
+              @elseif($product->color == 'Gold')
+              <span style="color:yellow;font-weight:bold;">{{ $product->color }}</span>
+              @elseif($product->color == 'White')
+              <span style="color:white;background:#222222;font-weight:bold;">{{ $product->color }}</span>
+              @endif
             </h5>
             <form action="{{ route('postCart') }}" method="post">
               <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -62,9 +69,9 @@
         </div>
         <div class="images_product">
           @if(count($product_images) > 0)
-            @foreach($product_images as $productimage)
-              <img src="{!! asset('Admin_style/images/details/'.$productimage['image']) !!}" alt="" class="img-responsive img-thumbnail anhnho" style="cursor:pointer;">
-            @endforeach
+          @foreach($product_images as $productimage)
+          <img src="{!! asset('Admin_style/images/details/'.$productimage['image']) !!}" alt="" class="img-responsive img-thumbnail anhnho" style="cursor:pointer;">
+          @endforeach
           @endif
         </div>
         <div class="panel panel-default">
@@ -72,7 +79,7 @@
             <h3 class="panel-title">Chi Tiết Điện Thoại</h3>
           </div>
           <div class="panel-body" style="padding-left:50px;">
-              {!! $product->detail !!}
+            {!! $product->detail !!}
           </div>
         </div>
 
@@ -82,7 +89,7 @@
         <div class="sanphamlienquan">
           <h3 class="text-center" style="color:blue;">Sản phẩm khác</h3>
           @foreach($different_products as $differentpd)
-            <div class="sp">
+          <div class="sp">
             <a href="{{route('detail',$differentpd->id)}}">
               <img src="{!! asset('Admin_style/images/'.$differentpd->images) !!}" alt="">
               <h5>{{$differentpd->name}}</h5>
@@ -107,13 +114,13 @@
 @stop
 @section('script')
 <script type="text/javascript">
-  $(document).ready(function(){
-    $(".anhnho").hover(function(){
+  $(document).ready(function() {
+    $(".anhnho").hover(function() {
       anho = $(this).attr("src");
-      $(".anhlon").attr('src',''+anho);
-      $(this).css('border','1px solid black');
-    },function(){
-      $(this).css('border','none');
+      $(".anhlon").attr('src', '' + anho);
+      $(this).css('border', '1px solid black');
+    }, function() {
+      $(this).css('border', 'none');
     });
   });
 </script>
