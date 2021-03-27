@@ -1,0 +1,4 @@
+Xây đựng chức năng hàng hóa(Product)
+- Thêm Xóa Sửa thông tin hàng hóa
+- Hiển thị thông tin hàng hóa 
+- (Nếu dc làm luôn API :)) )

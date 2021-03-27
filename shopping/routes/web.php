@@ -12,7 +12,7 @@
 */
 
 
- Route::get('/',['as'=>'index','uses'=>'PageController@getIndex']);
+Route::get('/',['as'=>'index','uses'=>'PageController@getIndex']);
 Route::get('/trademarks/{id}',['as'=>'trademarks','uses'=>'PageController@getTrademark'])->where('id',"[0-9]+");
 Route::get('/detail/{id}',['as'=>'detail','uses'=>'PageController@getDetail'])->where('id',"[0-9]+");
 Route::get('/register',['as'=>'register','uses'=>'PageController@getRegister']);
@@ -47,6 +47,7 @@ Route::group(['middleware' => 'AdminAuth','namespace' => 'Admin','prefix' => 'ad
     Route::get('dashboard',function(){
       return view('admin.dashboard.dashboard');
     });
+<<<<<<< HEAD
     //--------------------------------------------------------------------------////category
      Route::get('/category/list',['as'=>'cate.getlist','uses'=>'CategoryController@getList']);
     Route::get('/category/add',['as'=>'cate.getadd','uses'=>'CategoryController@getAdd']);
@@ -63,31 +64,32 @@ Route::group(['middleware' => 'AdminAuth','namespace' => 'Admin','prefix' => 'ad
     Route::get('/trademark/{id}/delete',['as'=>'trademark.getdelete','uses'=>'TrademarkController@getDelete']);
 
     //--------------------------------------------------------------------------//product
+=======
+    //category
+    Route::get('/category/list',['as'=>'cate.getlist','uses'=>'CategoryController@getList']);
+    
+    //trademark
+    Route::get('/trademark/list',['as'=>'trademark.getlist','uses'=>'TrademarkController@getList']);
+   
+    //product
+>>>>>>> bao
     Route::get('/product/list',['as'=>'product.getlist','uses'=>'ProductController@getList']);
     Route::get('/product/add',['as'=>'product.getadd','uses'=>'ProductController@getAdd']);
-    // Route::get('/product/{cate_id}/ajax',['as'=>'product.getajax','uses'=>'AjaxController@getAjaxCate']);
-    // Route::post('/product/add',['as'=>'product.postadd','uses'=>'ProductController@postAdd']);
-    //Route::get('/product/{id}/delete',['as'=>'product.getdelete','uses'=>'ProductController@getDelete']);
-    // Route::get('/product/{id}/edit',['as'=>'product.getedit','uses'=>'ProductController@getEdit']);
-    // Route::post('/product/{id}/edit',['as'=>'product.postedit','uses'=>'ProductController@postEdit']);
+    Route::get('/product/{cate_id}/ajax',['as'=>'product.getajax','uses'=>'AjaxController@getAjaxCate']);
+    Route::post('/product/add',['as'=>'product.postadd','uses'=>'ProductController@postAdd']);
+    Route::get('/product/{id}/delete',['as'=>'product.getdelete','uses'=>'ProductController@getDelete']);
+    Route::get('/product/{id}/edit',['as'=>'product.getedit','uses'=>'ProductController@getEdit']);
+    Route::post('/product/{id}/edit',['as'=>'product.postedit','uses'=>'ProductController@postEdit']);
 
     
 
-   //--------------------------------------------------------------------------// //Order
-      Route::get('/order/list',['as'=>'order.getlist','uses'=>'OrderController@getList']);
-    // Route::post('/order/{id}/edit',['as'=>'order.postedit','uses'=>'OrderController@postEdit']);
-    // Route::get('/order/{id}/delete',['as'=>'order.getdelete','uses'=>'OrderController@getDelete']);
+    //Order
+    Route::get('/order/list',['as'=>'order.getlist','uses'=>'OrderController@getList']);
 
-    ////--------------------------------------------------------------------------// //OrderDetails
-     Route::get('/orderdetail/{order_id}/list',['as'=>'orderdetail.getlist','uses'=>'OrderDetailController@getList']);
-    // Route::post('/orderdetail/{id}/edit',['as'=>'orderdetail.postedit','uses'=>'OrderDetailController@postEdit']);
-    // Route::get('/orderdetail/{id}/delete',['as'=>'orderdetail.getdelete','uses'=>'OrderDetailController@getDelete']);
+    //OrderDetails
+    Route::get('/orderdetail/{order_id}/list',['as'=>'orderdetail.getlist','uses'=>'OrderDetailController@getList']);
 
-    //--------------------------------------------------------------------------////user
+    //user
     Route::get('/user/list',['as'=>'user.getlist','uses'=>'UserController@getList']);
-    // Route::get('/user/add',['as'=>'user.getadd','uses'=>'UserController@getAdd']);
-    // Route::post('/user/add',['as'=>'user.postadd','uses'=>'UserController@postAdd']);
-    // Route::get('/user/{id}/edit',['as'=>'user.getedit','uses'=>'UserController@getEdit']);
-    // Route::post('/user/{id}/edit',['as'=>'user.postedit','uses'=>'UserController@postEdit']);
-    // Route::get('/user/{id}/delete',['as'=>'user.getdelete','uses'=>'UserController@getDelete']);
+
 });

@@ -8,7 +8,66 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
+<<<<<<< HEAD
    
+=======
+    ///////////////////// PRODUCT //////////////////////////
+    public function getAllProducts() 
+    {
+        $product = Product::all();
+        return response($product, 200);
+    }
+  
+    public function createProduct(Request $request)
+    {
+        if(Product::create($request->all()))
+        {
+            return response()->json($request);
+            // return ['Tạo thành công :>'=>(response()->json($request))];
+        }
+        else
+        {
+            return response()->json("Không tạo được :'<", );
+        }
+    }
+
+    public function getProduct($id) 
+    {
+        if($product = Product::all()->find($id))
+        {
+            return response()->json($product, 200);
+        }
+        else
+        {
+            return response()->json("Product not found!!", 200);
+        }
+    }
+
+    public function updateProduct(Request $request, $id) 
+    {
+        if($product = Product::where('id',$id)->update($request->all()))
+        {
+            return response()->json($request);
+        }
+        else
+        {
+            return response()->json("Sửa không thành công :'<");
+        }
+    }
+
+    public function deleteProduct ($id) 
+    {
+        if($product = Product::where('id', $id)->delete())
+        {
+            return response()->json("Deleted success!!");
+        }
+        else
+        {
+            return response()->json("Cannot delete :((");
+        }
+    }
+    /////////////////////////////////////////////////////////////////////////////
+>>>>>>> bao
 
     ////////////////////////////// CATEGORIES ///////////////////////////////////
     public function getAllCategories() 
