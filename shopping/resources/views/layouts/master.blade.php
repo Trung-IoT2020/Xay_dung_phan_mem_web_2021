@@ -37,7 +37,7 @@
           </div>
           <div class="pull-right auto-width-right">
             <ul class="top-details menu-beta l-inline">
-<<<<<<< HEAD
+
 			<!--đăng nhập đăng ký-->
 			@if(Auth::check())
               <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {!! Auth::user()->name !!}</a></li>
@@ -47,10 +47,10 @@
                 <li><a href="{{ url('/login') }}">Đăng nhập</a></li>
               @endif
               
-=======
+
               <!--đăng nhập đăng ký-->
 
->>>>>>> nhan
+
             </ul>
           </div>
           <div class="clearfix"></div>
