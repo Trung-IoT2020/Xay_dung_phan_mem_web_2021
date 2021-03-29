@@ -1,4 +1,6 @@
-Xây dựng tính năng tìm kiếm theo tên sản phẩm
+﻿Xây dựng tính năng tìm kiếm theo tên sản phẩm
  - tìm theo giá trị gần đúng 
  - thêm đường dẫn cho khách hàng biết mình đang ở đâu trong chương trình vd(home/ketqua/...) (all)
  - thêm sản phẩm khác để gợi ý cho khách hàng khi vào chi tiết sản phẩm 
+
+(đã xong)

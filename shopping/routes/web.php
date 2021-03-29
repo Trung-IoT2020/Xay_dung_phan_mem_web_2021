@@ -27,7 +27,7 @@ Route::post('/updatecart',['as'=>'postUpdateCart','uses'=>'CartController@Update
 Route::get('/order',['as'=>'getOrder','uses'=>'OrderController@getOrder']);
 Route::post('/order',['as'=>'postOrder','uses'=>'OrderController@postOrder']);
 Route::get('/order/success','OrderController@getSuccess');
-Route::post('search','PageController@Search');
+ Route::post('search','PageController@Search');
 
 
 

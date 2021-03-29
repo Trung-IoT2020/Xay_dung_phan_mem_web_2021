@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 top">
-                <h3 class="pull-left">Từ Khóa tìm kiếm : {{$key}}</h3><br>
-                <ol class="breadcrumb pull-right">
+                <h3 class="pull-left">Từ Khóa tìm kiếm :{{$key}}</h3><br>
+                 <ol class="breadcrumb pull-right">
                     <li><a href="{{url('/')}}">Home</a></li>
                     <li class="active">Search</li>
                 </ol>
